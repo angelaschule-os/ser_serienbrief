@@ -1,4 +1,4 @@
-# Erstellen des Elternbriefs
+# Erstellung Elternbrief für die Elternvertreter
 
 ```shell
 pdflatex elternbrief.tex
