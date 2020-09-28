@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{dinbrief}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{cmbright}
+\usepackage{graphicx}
+\usepackage{csvsimple}
+\usepackage{xcolor}
+\definecolor{dunkelblau}{HTML}{27509B}
+
+% Die csv-Datei hat die Spalte "mw" für das Geschlecht.
+\newcommand{\ifmale}[2]{\ifcsvstrcmp{\mw}{m}{#1}{#2}}
+
+\backaddress{
+	Angelaschule Osnabrück $\bullet$ 
+	Bramschtraße 41a $\bullet$ 
+	49090 Osnabrück
+}
+\Datum{}
+\nowindowrules
+
+\newcommand{\briefkopf}{
+\setlength{\unitlength}{1cm}
+\begin{picture}(10,10)
+\put(0,8.2){\Huge Angelaschule Osnabrück}
+\put(0,7.8){\scriptsize staatlich amerkanntes Gymnasium der Schulstiftung im Bistum Osnabrück}
+\put(12,6.5){\includegraphics[scale=0.3]{logo.pdf}}
+\put(12,3){\shortstack[l]{{\scriptsize Bramstraße 41a}\\
+{\scriptsize 49090 Osnabrück}\\
+\\
+\\
+{\scriptsize Tel 05\,41 61\,09\,4-0}\\
+{\scriptsize Fax 05\,41 61\,09\,4-15}\\
+\\
+\\
+{\scriptsize www.angelaschule-os.de}\\
+{\scriptsize E-Mail angelaschule@t-online.de}\\
+\\
+\\
+\today}}
+\linethickness{1.5pt}
+\color{dunkelblau}
+\put(-2.4,7.4){\line(1,0){14.2}}
+\put(15.3,7.4){\line(1,0){2.7}}
+\end{picture}
+}
+
+\address{\briefkopf}
+\subject{\bf Zugangsdaten zum IServ der Angelaschule}
+\signature{\textit{Das Team der Systemadministratoren}}
+
+\begin{document}
+\csvreader[head to column names]{ser_neu.csv}{}{%
+\begin{letter}{
+	\uppercase{persönlich}\\[1em]
+	\ifmale{Herrn}{Frau}\\
+	\Vorname\ \Nachname
+}
+\opening{\ifmale{Sehr geehrter Herr}{Sehr geehrte Frau}\ \Nachname,}
+
+vielen Dank, dass Sie als Elternvertreter\ifmale{}{in}\ mitwirken.
+
+Für die Teilnahme an der digitalen Kommunikation verwenden Sie bitte den IServ der Angelaschule. Dazu melden Sie sich bitte auf der Internetseite
+\begin{center}
+https://angelaschule-osnabrueck.net/iserv
+\end{center}
+mit folgenden Zugangsdaten an:
+\begin{description}
+	\item[Account:] \texttt{\Account}
+	\item[vorläufiges Passwort:] \texttt{\Passwort}
+\end{description}
+
+Das weitere Vorgehen erklärt Ihnen die Broschüre "`Erste Schritte"'.
+
+\closing{Herzliche Grüße}
+% \encl{Die Anlage}
+\end{letter}}
+
+\end{document} 
