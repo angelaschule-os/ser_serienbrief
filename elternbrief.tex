@@ -1,8 +1,11 @@
 \documentclass[a4paper,12pt]{dinbrief}
 \usepackage[utf8]{inputenc}
+% apt-get install texlive-lang-german
 \usepackage[ngerman]{babel}
+% apt-get install texlive-fonts-extra
 \usepackage{cmbright}
 \usepackage{graphicx}
+% https://ctan.org/pkg/csvsimple
 \usepackage{csvsimple}
 \usepackage{xcolor}
 \definecolor{dunkelblau}{HTML}{27509B}
@@ -11,8 +14,8 @@
 \newcommand{\ifmale}[2]{\ifcsvstrcmp{\mw}{m}{#1}{#2}}
 
 \backaddress{
-	Angelaschule Osnabrück $\bullet$ 
-	Bramschtraße 41a $\bullet$ 
+	Angelaschule Osnabrück $\bullet$
+	Bramstraße 41a $\bullet$
 	49090 Osnabrück
 }
 \Datum{}
@@ -33,7 +36,7 @@
 \\
 \\
 {\scriptsize www.angelaschule-os.de}\\
-{\scriptsize E-Mail angelaschule@t-online.de}\\
+{\scriptsize angelaschule@t-online.de}\\
 \\
 \\
 \today}}
@@ -59,7 +62,9 @@
 
 vielen Dank, dass Sie als Elternvertreter\ifmale{}{in}\ mitwirken.
 
-Für die Teilnahme an der digitalen Kommunikation verwenden Sie bitte den IServ der Angelaschule. Dazu melden Sie sich bitte auf der Internetseite
+Für die Teilnahme an der digitalen Kommunikation verwenden Sie bitte den
+IServ der Angelaschule. Dazu melden Sie sich bitte auf der Internetseite
+
 \begin{center}
 https://angelaschule-osnabrueck.net/iserv
 \end{center}
@@ -75,4 +80,4 @@ Das weitere Vorgehen erklärt Ihnen die Broschüre "`Erste Schritte"'.
 % \encl{Die Anlage}
 \end{letter}}
 
-\end{document} 
+\end{document}
