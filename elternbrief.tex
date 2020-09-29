@@ -9,6 +9,7 @@
 \usepackage{csvsimple}
 \usepackage{xcolor}
 \definecolor{dunkelblau}{HTML}{27509B}
+\usepackage{qrcode}
 
 % Die csv-Datei hat die Spalte "mw" für das Geschlecht.
 \newcommand{\ifmale}[2]{\ifcsvstrcmp{\mw}{m}{#1}{#2}}
@@ -66,7 +67,7 @@ Für die Teilnahme an der digitalen Kommunikation verwenden Sie bitte den
 IServ der Angelaschule. Dazu melden Sie sich bitte auf der Internetseite
 
 \begin{center}
-https://angelaschule-osnabrueck.net/iserv
+\qrcode[height=2em]{https://angelaschule-osnabrueck.net/iserv} https://angelaschule-osnabrueck.net/iserv
 \end{center}
 mit folgenden Zugangsdaten an:
 \begin{description}
@@ -77,7 +78,7 @@ mit folgenden Zugangsdaten an:
 Die Erläuterungen und Hinweise zu den ersten Schritten finden Sie unter:
 
 \begin{center}
-https://angelaschule-osnabrueck.net/ser
+\qrcode[height=2em]{https://angelaschule-osnabrueck.net/ser} https://angelaschule-osnabrueck.net/ser
 \end{center}
 
 \closing{Herzliche Grüße}
