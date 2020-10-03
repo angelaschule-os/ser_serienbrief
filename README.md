@@ -31,7 +31,9 @@ Konfiguration:
 
 ### Schritt 2) CSV-Datei in IServ über das Import-Modul importieren
 
-TODO
+Folge den Anweisungen des Import-Moduls. Hier gibt es - außer hoher Achtsamkeit - nichts besonderes mehr zu tun.
+
+TODO: SER-Profil hier dokumentieren?
 
 ### Schritt 3) CSV-Datei der neuen Accounts nachbearbeiten
 
