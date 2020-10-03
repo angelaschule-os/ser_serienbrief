@@ -11,7 +11,7 @@ Testdaten erstellen mittels <https://www.mockaroo.com/>.
 Konfiguration:
 - Nachname - Last name
 - Vorname - First name
-- mw - Gender (abbrev) : `if this == 'M' then 'm' else 'w' end`
+- mw - Gender (abbrev): `if this == 'M' then 'm' else 'w' end`
 - Account - Username: `concat(lower(field('Vorname')), ".", lower(field('Nachname')))`
 - Passwort - Password
 
@@ -29,9 +29,20 @@ Konfiguration:
 8) Leerzeichen bei Bindestrichen bereinigen
 9) CSV in IServ über das Import-Modul importieren (siehe Schritt 2)
 
-### Schritte 2) CSV in IServ über das Import-Modul importieren
+### Schritt 2) CSV-Datei in IServ über das Import-Modul importieren
 
 TODO
 
-Resultierende CSV-Datei nach Import mit Passwörter für die Erstellung des
-Serienbriefes speichern.
+### Schritt 3) CSV-Datei der neuen Accounts nachbearbeiten
+
+Das Import-Modul speichert die Daten der neu hinzugefügten Accounts in einer Datei nach dem Schema
+
+`Import-SER-<YYYY-MM-DD-hh-mm-ss>-Hinzugefügt.csv`
+
+im Home-Verzeichnis des Administrators, der den Import angestoßen hatte.
+
+Dieser Datei muss nun eine Spalte "mw" hinzugefügt werden mit den Abkürzungen "m" für männlich (und "w" für weiblich). 
+
+TODO: 3. Form?
+
+Die ergänzte Datei muss unter dem Namen `ser_neu.csv` im Verzeichnis mit der TeX-Datei abgespeichert werden.
